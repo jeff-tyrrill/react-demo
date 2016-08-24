@@ -226,10 +226,6 @@ var StickyNote = React.createClass({
             borderWidth: this.props.data.borderWidth || 1,
             borderColor: this.props.data.borderColor || 'black'
         };
-        var stylesFold = {
-            // top: (this.state.isMoving ? this.state.moveY : this.props.data.y) - 1,
-            // left: (this.state.isMoving ? this.state.moveX : this.props.data.x) - 1,
-        };
         var stylesDelete = {
             display: (this.state.isHover ? 'block' : 'none')
         };
@@ -261,7 +257,7 @@ var StickyNote = React.createClass({
                     </div>
                     <textarea ref={(c) => this._edit = c} className="edit" style={stylesEdit} value={this.state.edit} onChange={this.editChange} onClick={this.editClick} onBlur={this.editEnd}></textarea>
                 </div>
-                <div className="fold" style={stylesFold} onClick={this.clickAbsorb}></div>
+                <div className="fold" onClick={this.clickAbsorb}></div>
             </div>
         );
     }
