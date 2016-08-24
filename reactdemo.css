@@ -1,0 +1,73 @@
+.bulletinBoard {
+    width: 100%;
+    height: 1000px;
+    margin: 0;
+    padding: 0;
+}
+.stickyNoteContainer {
+    position: absolute;
+    box-sizing: border-box;
+}
+.stickyNote {
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    border-style: solid;
+    padding: 16px;
+    overflow: hidden;
+}
+.fold {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-image: url(/image/fold.png);
+    background-size: 16px;
+    background-repeat: no-repeat;
+}
+.edit {
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+}
+.delete {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    background-image: url(/image/button-delete.png);
+    background-size: 12px;
+    cursor: pointer;
+}
+.color {
+    position: absolute;
+    left: 4px;
+    bottom: 4px;
+    width: 12px;
+    height: 12px;
+    background-image: url(/image/button-color.png);
+    border-radius: 6px;
+    background-size: 12px;
+    cursor: pointer;
+}
+.resize {
+    position: absolute;
+    right: 4px;
+    bottom: 4px;
+    width: 12px;
+    height: 12px;
+    background-image: url(/image/button-resize.png);
+    background-size: 12px;
+    cursor: nwse-resize;
+}
+.move {
+    position: absolute;
+    left: 20px;
+    top: 2px;
+    width: 12px;
+    height: 12px;
+    background-image: url(/image/button-move.png);
+    background-size: 12px;
+    cursor: move;
+}
