@@ -40,20 +40,20 @@ if error == False:
         }
     
     if len(input) > 0:
-        # try:
-        tempName = 'bulletin-board-'
-        for i in range(32):
-            tempName += SystemRandom().choice(string.ascii_lowercase)
-        tempName += '.json'
-        bulletinBoardFileNew = open(tempName, 'w')
-        bulletinBoardFileNew.write(json.dumps(bulletinBoard))
-        bulletinBoardFileNew.flush()
-        os.fsync(bulletinBoardFileNew.fileno())
-        bulletinBoardFileNew.close()
-        os.remove('bulletin-board.json')
-        os.rename(tempName, 'bulletin-board.json')
-        # except:
-            # pass
+        try:
+            tempName = 'bulletin-board-'
+            for i in range(32):
+                tempName += SystemRandom().choice(string.ascii_lowercase)
+            tempName += '.json'
+            bulletinBoardFileNew = open(tempName, 'w')
+            bulletinBoardFileNew.write(json.dumps(bulletinBoard))
+            bulletinBoardFileNew.flush()
+            os.fsync(bulletinBoardFileNew.fileno())
+            bulletinBoardFileNew.close()
+            os.remove('bulletin-board.json')
+            os.rename(tempName, 'bulletin-board.json')
+        except:
+            pass
     
     print(json.dumps({'message': 'success', 'data': bulletinBoard}))
 
